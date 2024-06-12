@@ -3,7 +3,7 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('<h1>Best Website ever</h1>')
+    return render(request, 'sitemap/home.html')
 
 
 def about(request):
