@@ -7,12 +7,12 @@ def home(request):
 
 
 def about(request):
-    return HttpResponse('<h1>About site</h1>')
+    return render(request, 'sitemap/about.html')
 
 
 def contact(request):
-    return HttpResponse('<h1>Contact Us</h1>')
+    return render(request, 'sitemap/contacts.html')
 
 
 def service(request):
-    return HttpResponse('<h1>Our Services</h1>')
+    return render(request, 'sitemap/service.html')
