@@ -7,6 +7,7 @@ def home(request):
 
 
 def about(request):
+
     return render(request, 'sitemap/about.html')
 
 
@@ -16,3 +17,4 @@ def contact(request):
 
 def service(request):
     return render(request, 'sitemap/service.html')
+
