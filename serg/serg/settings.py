@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-_!2#6cxos0&=w3_cc6(ay2z(qlu81fl(99xql-z%v-nay_q8f0
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.144.248', '127.0.0.1']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -77,11 +77,17 @@ WSGI_APPLICATION = 'serg.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
+#
+# IMPORTANT: USER AND PASSWORD SHOULD NOT BE INCLUDED AS PLAIN TEXT IN PRODUCTION
+# ENVIRONMENT, CREATE AND USE ENV VARIABLES ON HOST MACHINE
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sergdb',
+        'USER': 'admin',
+        'PASSWORD' : 'rxT68A/h',
+        'HOST': 'localhost',
+        'PORT': ''
     }
 }
 
